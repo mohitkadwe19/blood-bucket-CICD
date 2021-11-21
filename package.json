@@ -1,0 +1,26 @@
+{
+  "name": "bloodonation",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon src/app.js -e js,hbs"
+  },
+  "dependencies": {
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "express": "~4.16.1",
+    "express-session": "^1.17.2",
+    "hbs": "^4.2.0",
+    "http-errors": "~1.6.3",
+    "mongoose": "^6.0.13",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.15",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3"
+  }
+}
