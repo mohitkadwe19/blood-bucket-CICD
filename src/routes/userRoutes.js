@@ -1,46 +1,55 @@
 const express = require('express');
 const router = express.Router();
-const { home, donateBlood, donorCenter, appointment, support, about, contact, privacyPolicy, register, login, forgotPassword, resetPassword, userDashboard, getHospital, getAppointment, getUserProfile } = require('../controllers/userController')
+const {
+    home,
+    getFindDonor,
+    getOrganizeCamp,
+    getJoinUs,
+    getAbout,
+    getContact,
+    getRegister,
+    getLogin,
+    getForgotPassword,
+    getResetPassword,
+    getUserDashboard,
+    getHospital,
+    getAppointment,
+    getUserProfile
+} = require('../controllers/userController')
 
 
 // home get controller
 router.get('/', home);
 
-// blood donation get controller
-router.get('/donateBlood', donateBlood);
+//find Donor get controller
+router.get('/getFindDonor', getFindDonor);
 
-// donor Center  get controller
-router.get('/donorCenter', donorCenter);
-
-// appointment get controller
-router.get('/appointment', appointment);
-
-// support get controller
-router.get('/support', support);
+// organize Camp get controller
+router.get('/getOrganizeCamp', getOrganizeCamp);
 
 // about get controller
-router.get('/about', about);
+router.get('/getAbout', getAbout);
 
 // contact get controller
-router.get('/contact', contact);
+router.get('/getContact', getContact);
 
-// privacy policy get controller
-router.get('/privacyPolicy', privacyPolicy);
+// join us get controller
+router.get('/getJoinUs', getJoinUs);
 
 // register get controller
-router.get('/register', register);
+router.get('/getRegister', getRegister);
 
 // login get controller
-router.get('/login', login);
+router.get('/getLogin', getLogin);
 
 // forgotPassword get controller
-router.get('/forgotPassword', forgotPassword);
+router.get('/getForgotPassword', getForgotPassword);
 
 // resetPassword get controller
-router.get('/resetPassword', resetPassword);
+router.get('/getResetPassword', getResetPassword);
 
 // user dashboard get controller
-router.get('/userDashboard', userDashboard);
+router.get('/getUserDashboard', getUserDashboard);
 
 // hospital get controller
 router.get('/getHospital', getHospital);

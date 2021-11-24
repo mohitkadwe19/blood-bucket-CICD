@@ -17,7 +17,7 @@ var favicon = require('serve-favicon')
 // connect to  database  
 require('./db/conn')
 
-app.use(favicon(path.join(__dirname, '../public/uploads/2019/04', 'favicon.ico')))
+// app.use(favicon(path.join(__dirname, '../public/uploads/2019/04', 'favicon.ico')))
 
 
 // file path 

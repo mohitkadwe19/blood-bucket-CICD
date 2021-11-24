@@ -14,14 +14,14 @@ const getHospitalLogin = (req, res) => {
 };
 
 // donor list get method
-const getDonorList = (req, res) => {
+const getHospitalDonorList = (req, res) => {
     res.render('Hospital/donorList', {
         title: 'Donor List',
     });
 };
 
 // receiver list get method
-const getReceiverList = (req, res) => {
+const getHospitalReceiverList = (req, res) => {
     res.render('Hospital/receiverList', {
         title: 'Receiver List',
     });
@@ -45,8 +45,8 @@ const getChangeDetails = (req, res) => {
 module.exports = {
     getHospitalDashboard,
     getHospitalLogin,
-    getDonorList,
-    getReceiverList,
+    getHospitalDonorList,
+    getHospitalReceiverList,
     getAppoint,
     getChangeDetails,
 

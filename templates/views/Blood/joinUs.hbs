@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css?v=1" />
+    <link rel="stylesheet" type="text/css" href="/css/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/css/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="/css/chart-style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Meta tags -->
+    <title>{{title}}</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+    <style>
+        /* .img-hover{
+            transition: transform .5s ease;
+        }
+        .img-hover:hover{
+            transform: scale(1.25);
+        } */
+        .section {
+            overflow: hidden;
+        }
+
+        .section:hover>img {
+            transform: scale(1.15);
+        }
+
+        .section>img {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            z-index: -1;
+            transition: transform 0.5s ease-in;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="fixed z-6 d-flex justify-content-end hide-lg " id="mobile-nav">
+        <button class="menu show-md color-white h-max bg-none" id="mobile-nav-toggler" onclick="toggleMobileNav()">
+            <i class="fa fa-bars f-20"></i>
+        </button>
+        <ul class="mobile-nav hide bg-white" id="mobile-nav-list">
+            <li class="bg-main">
+                <a class="nav-link color-white fw-4" href="/findDonor">FIND A DONOR</a>
+            </li>
+            <li class="bg-main">
+                <a class="nav-link color-white fw-4" href="/organizeCamp">ORGANIZE A CAMP</a>
+            </li>
+            <li class="bg-main">
+                <a class="nav-link color-white fw-4" href="/joinUs">JOIN US</a>
+            </li>
+            <li class="bg-white">
+                <a href="/about" class="color-dark f-14 fw-4 nav-link">ABOUT US</a>
+            </li>
+            <li class="bg-white">
+                <a href="/contact" class="color-dark f-14 fw-4 nav-link">CONTACT US</a>
+            </li>
+            <li class="bg-main">
+                <a class="nav-link color-white fw-4" href="/login">Login</a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="navbar justify-content-center-sm justify-content-between pb-0 sticky-sm z-5 bg-none " id="navbar">
+        <div class="d-flex flex-row align-items-center justify-content-end">
+            <a class="navbar-brand" href="/">
+                <img src="/img/homepage/Logo.png" height="35" alt="BloodConnect Logo" />
+            </a>
+            <ul class="navbar-nav flex-row align-items-end hide-md" style="border-bottom: none !important">
+                <li class="px-3">
+                    <a href="/about" class="color-white b-white f-14">ABOUT US</a>
+                </li>
+                <li class="px-3">
+                    <a href="/findDonor" class="color-white b-white f-14">FIND A DONOR</a>
+                </li>
+                <li class="px-3">
+                    <a href="/organizeCamp" class="color-white b-white f-14">ORGANIZE A CAMP</a>
+                </li>
+                <li class="px-3">
+                    <a href="/joinUs" class="color-white b-white f-14">JOIN US</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex flex-row align-items-center hide-md">
+            <a href="/contact" class="f-14 color-white mr-3 uppercase">Contact Us</a>
+            <a href="/login" class="f-14 sponsor-link-button color-dark fw-6 px-3 py-2 uppercase">Login</a>
+        </div>
+    </nav>
+    <nav class="navbar flex-column-sm align-items-start justify-content-between pb-0 sticky-navbar z-5 bg-white pb-2 hide"
+        id="navbar-sticky">
+        <div class="d-flex flex-row align-items-center justify-content-end">
+            <a class="navbar-brand" href="/">
+                <img src="/img/logo.png" height="35" alt="BloodConnect Logo" />
+            </a>
+            <ul class="navbar-nav flex-row hide-md align-items-end" style="border-bottom: none !important">
+                <li class="px-3">
+                    <a href="/about" class="color-dark b-dark f-14">ABOUT US</a>
+                </li>
+                <li class="px-3">
+                    <a href="/findDonor" class="color-dark b-dark f-14">FIND A DONOR</a>
+                </li>
+                <li class="px-3">
+                    <a href="/organizeCamp" class="color-dark b-dark f-14">ORGANIZE A CAMP</a>
+                </li>
+                <li class="px-3">
+                    <a href="/joinUs" class="color-dark b-dark f-14">JOIN US</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex flex-row align-items-center hide-md">
+            <a href="/Login"
+                class="f-14 sponsor-link-button color-dark fw-6 px-3 py-2 uppercase bg-main color-white">Login</a>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid h-120-min  pl-0 pr-0 content pt-100-sm relative d-flex flex-row flex-column-sm align-items-center"
+        style="margin-top: -150px;z-index: 2;">
+        <div
+            class=" section d-flex flex-column container col-lg-6 h-120 justify-content-center align-items-center z-5 px-0-sm pt-5">
+            <img src="./img/join-us/donate.jpg" alt="" srcset="">
+            <h1 class="display-4 color-white  text-center px-2 mb-0  pt-5">Register as a Donor</h1>
+            <p class="color-white text-center px-2">
+                Help people in case of emergency blood requirements
+            </p>
+            <div class="d-flex mt-2 px-2">
+                <a class="color-white" href="/register"><button class="shadow btn-main bg-main mr-2">Register as
+                        a Donor</button></a>
+            </div>
+        </div>
+        <div
+            class="section d-flex flex-column container col-lg-6 h-120 justify-content-center align-items-center z-5 px-0-sm pt-5-lg">
+            <img src="./img/join-us/pooja.jpg" alt="" srcset="">
+            <h1 class="display-4 color-white text-center px-2 mb-0 mt-5 pt-5 ">Volunteer with us</h1>
+            <p class="color-white text-center px-2">
+                Make an impact, join us and save lives!
+            </p>
+            <div class="d-flex mt-2 px-2">
+                <a href="/joinUs" class="color-white">
+                    <button class="shadow btn-main bg-main mr-2" id="go-to-form">Join us</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    {{>homeFooter}}

@@ -8,83 +8,72 @@ const home = (req, res) => {
 };
 
 // Blood donation get method
-const donateBlood = (req, res) => {
-    res.render('Blood/donateBlood', {
-        title: 'Donate Blood',
+const getFindDonor = (req, res) => {
+    res.render('Blood/findDonor', {
+        title: 'find a donor',
 
     });
 };
 
-//donor center location get method
-const donorCenter = (req, res) => {
-    res.render('Blood/donorCenter', {
-        title: 'Donor Center',
+//organize Camp get method
+const getOrganizeCamp = (req, res) => {
+    res.render('Blood/organizeCamp', {
+        title: 'organizeCamp',
     })
 };
-// appointment  get method
-const appointment = (req, res) => {
-    res.render('Blood/appointment', {
-        title: 'Appointment',
+// join us  get method
+const getJoinUs = (req, res) => {
+    res.render('Blood/joinUs', {
+        title: 'join us',
     })
 };
 
-// support get method
-const support = (req, res) => {
-    res.render('Blood/support', {
-        title: 'Support',
-    })
-};
+
 // about us get method
-const about = (req, res) => {
+const getAbout = (req, res) => {
     res.render('Blood/about', {
         title: 'About',
     })
 };
 
 //contact  us get  method
-const contact = (req, res) => {
+const getContact = (req, res) => {
     res.render('Blood/contact', {
         title: 'Contact',
     })
 };
 
-// private policy get method    
-const privacyPolicy = (req, res) => {
-    res.render('Blood/privacyPolicy', {
-        title: 'Private Policy',
-    })
-};
 
 // register get method
-const register = (req, res) => {
+const getRegister = (req, res) => {
     res.render('Blood/register', {
         title: 'Register',
     })
 };
 
 // login get method
-const login = (req, res) => {
+const getLogin = (req, res) => {
     res.render('Blood/login', {
         title: 'Login',
     })
 };
 
 // forgot password get method
-const forgotPassword = (req, res) => {
+const getForgotPassword = (req, res) => {
     res.render('Blood/forgotPassword', {
         title: 'Forgot Password',
     })
 };
 
 // reset password get method
-const resetPassword = (req, res) => {
+const getResetPassword = (req, res) => {
     res.render('Blood/resetPassword', {
         title: 'Reset Password',
     })
 };
 
 // user dashboard get method
-const userDashboard = (req, res) => {
+const getUserDashboard = (req, res) => {
     res.render('Blood/userDashboard', {
         title: 'User Dashboard',
     })
@@ -114,23 +103,17 @@ const getUserProfile = (req, res) => {
 
 module.exports = {
     home,
-    donateBlood,
-    donorCenter,
-    appointment,
-    support,
-    about,
-    contact,
-    privacyPolicy,
-    register,
-    login,
-    forgotPassword,
-    resetPassword,
-    userDashboard,
+    getFindDonor,
+    getOrganizeCamp,
+    getJoinUs,
+    getAbout,
+    getContact,
+    getRegister,
+    getLogin,
+    getForgotPassword,
+    getResetPassword,
+    getUserDashboard,
     getHospital,
     getAppointment,
     getUserProfile
-
-
-
-
 }

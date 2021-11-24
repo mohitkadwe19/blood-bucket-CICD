@@ -1,390 +1,336 @@
-{{>homeNavbar}}
+<!DOCTYPE html>
+<html lang="en">
 
-<section id="section-content" class="content page-17 moto-section" data-widget="section" data-container="section">
-    <div class="moto-widget moto-widget-block moto-bg-color_custom4 moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto"
-        data-widget="block" data-spacing="lala"
-        style="background-image:url(/uploads/2019/04/mt-1802-content-bg05.jpg);background-position:top;background-repeat:no-repeat;background-size:cover;"
-        data-bg-image="/uploads/2019/04/mt-1802-content-bg05.jpg" data-bg-position="top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{{title}}</title>
 
+</head>
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="moto-cell col-sm-12" data-container="container">
+<body>
 
+    <!-- Navbar start here -->
+    <nav class="fixed z-6 d-flex justify-content-end hide-lg " id="mobile-nav">
+        <button class="menu show-md color-white h-max bg-none" id="mobile-nav-toggler" onclick="toggleMobileNav()">
+            <i class="fa fa-bars f-20"></i>
+        </button>
+        <ul class="mobile-nav hide bg-white" id="mobile-nav-list">
+            <li class="bg-main">
+                <a class="nav-link color-white fw-4" href="/findDonor">FIND A DONOR</a>
+            </li>
+            <li class="bg-main">
+                <a class="nav-link color-white fw-4" href="/organizeCamp">ORGANIZE A CAMP</a>
+            </li>
+            <li class="bg-main">
+                <a class="nav-link color-white fw-4" href="/joinUs">JOIN US</a>
+            </li>
+            <li class="bg-white">
+                <a href="/about" class="color-dark f-14 fw-4 nav-link">ABOUT US</a>
+            </li>
+            <li class="bg-white">
+                <a href="/contact" class="color-dark f-14 fw-4 nav-link">CONTACT US</a>
+            </li>
+            <li class="bg-main">
+                <a class="nav-link color-white fw-4" href="/login">Login</a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="navbar justify-content-center-sm justify-content-between pb-0 sticky-sm z-5  bg-main-dark " id="navbar">
+        <div class="d-flex flex-row align-items-center justify-content-end">
+            <a class="navbar-brand" href="/">
+                <img src="/img/homepage/Logo.png" height="35" alt="BloodConnect Logo">
+            </a>
+            <ul class="navbar-nav flex-row  align-items-end hide-md" style="border-bottom: none !important;">
 
-                    <div class="moto-widget moto-widget-row row-fixed moto-justify-content_center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-                        data-grid-type="sm" data-widget="row" data-spacing="aaaa" data-bg-position="left top">
-
-
-                        <div class="container-fluid">
-                            <div class="row" data-container="container">
-
-
-                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-                                    data-widget="row.column" data-container="container" data-spacing="aaaa"
-                                    data-bg-position="left top">
-
-
-
-                                    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-                                        data-widget="text" data-preset="default" data-spacing="aaaa" data-animation="">
-                                        <div class="moto-widget-text-content moto-widget-text-editable">
-                                            <h1 class="moto-text_system_5">Contact us</h1>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
+                <li class="px-3">
+                    <a href="/about" class="color-white b-white f-14 ">ABOUT US</a>
+                </li>
+                <li class="px-3">
+                    <a href="/findDonor" class="color-white b-white f-14 ">FIND A DONOR</a>
+                </li>
+                <li class="px-3">
+                    <a href="/organizeCamp" class="color-white b-white f-14 ">ORGANIZE A CAMP</a>
+                </li>
+                <li class="px-3">
+                    <a href="/joinUs" class="color-white b-white f-14 ">JOIN US</a>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="moto-widget moto-widget-block moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-        data-widget="block" data-spacing="aaaa" data-bg-position="left top">
+        <div class="d-flex flex-row align-items-center hide-md">
+            <a href="/contact" class="f-14 color-white mr-3 uppercase">Contact Us</a>
+            <a href="/Login" class="f-14 sponsor-link-button color-dark fw-6 px-3 py-2 uppercase">Login </a>
+        </div>
+    </nav>
+    <nav class="navbar flex-column-sm align-items-start justify-content-between pb-0 sticky-navbar z-5 bg-white pb-2 hide"
+        id="navbar-sticky">
+        <div class="d-flex flex-row align-items-center justify-content-end">
+            <a class="navbar-brand" href="/">
+                <img src="/img/logo.png" height="35" alt="BloodConnect Logo" />
+            </a>
+            <ul class="navbar-nav flex-row hide-md align-items-end" style="border-bottom: none !important">
+                <li class="px-3">
+                    <a href="/about" class="color-dark b-dark f-14">ABOUT US</a>
+                </li>
+                <li class="px-3">
+                    <a href="/findDonor" class="color-dark b-dark f-14">FIND A DONOR</a>
+                </li>
+                <li class="px-3">
+                    <a href="/organizeCamp" class="color-dark b-dark f-14">ORGANIZE A CAMP</a>
+                </li>
+                <li class="px-3">
+                    <a href="/joinUs" class="color-dark b-dark f-14">JOIN US</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex flex-row align-items-center hide-md">
+            <a href="/Login"
+                class="f-14 sponsor-link-button color-dark fw-6 px-3 py-2 uppercase bg-main color-white">Login</a>
+        </div>
+    </nav>
+    <!-- Contact form-->
+    <div class="container-fluid pd-2 pb-2  mb-4 content  bg-main-dark pt-5-sm">
+        <div class="container">
 
+            <div class="row pt-5 mb-3 m-0">
+                <div class="col-lg-6 col-sm-12 col-md-12 pt-6">
+                    <div class="accordion" id="accordionExample">
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="moto-cell col-sm-12" data-container="container">
+                        <div class="card bg-white b1-light mb-2">
+                            <div class="card-header bg-none" id="headingSeven">
+                                <h2 class="mb-0 raise-a-request-faq">
+                                    <p class="collapsed d-flex mb-0 justify-content-between align-items-center bg-none text-left hand f-16"
+                                        data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true"
+                                        aria-controls="collapseSeven">
+                                        Is BloodConnect a registered organization?
+                                        <i class="fa fa-angle-right f-30"></i>
+                                    </p>
+                                </h2>
+                            </div>
 
-                    <div class="moto-widget moto-widget-row row-gutter-0 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-                        data-grid-type="sm" data-widget="row" data-spacing="aaaa" data-bg-position="left top">
-
-
-                        <div class="container-fluid">
-                            <div class="row" data-container="container">
-
-
-                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-                                    data-widget="row.column" data-container="container" data-spacing="aaaa"
-                                    data-bg-position="left top">
-
-
-                                    <div id="wid_1555319661_9it15w5l1"
-                                        class="moto-widget moto-widget-google-map-pro moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto "
-                                        data-widget="google_map_pro">
-                                        <div class="moto-widget-google-map-pro-wrapper"
-                                            data-map-properties="{&quot;center&quot;:{&quot;lat&quot;:40.7127753,&quot;lng&quot;:-74.0059728},&quot;zoom&quot;:10,&quot;theme&quot;:&quot;standard&quot;,&quot;mapTypeControl&quot;:true,&quot;zoomControl&quot;:true,&quot;streetViewControl&quot;:true,&quot;rotateControl&quot;:false,&quot;scaleControl&quot;:false,&quot;fullscreenControl&quot;:true,&quot;styles&quot;:[],&quot;mapTypeId&quot;:&quot;roadmap&quot;}"
-                                            data-map-markers="[{&quot;icon&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;position&quot;:{&quot;lat&quot;:40.7127753,&quot;lng&quot;:-74.0059728},&quot;uid&quot;:&quot;gmm_1555319697_021464&quot;,&quot;clickable&quot;:true,&quot;visible&quot;:true}]"
-                                            style="height: 760px"></div>
-                                    </div>
-
+                            <div id="collapseSeven" class="collapse  bg-white b-0" aria-labelledby="headingSeven"
+                                data-parent="#accordionExample">
+                                <div class="card-body color-dark-light bg-white">
+                                    Yes, BloodConnect Foundation is a not-for-profit NGO, registered as a charitable
+                                    Trust in the office
+                                    of Sub-Registrar, Delhi.
+                                    <br> We are registered under Section 12A of the Income Tax Act, 1961 and also
+                                    granted approval to
+                                    receive donations under section 80G section of the Income Tax Act, 1961.
 
                                 </div>
-                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-8 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-                                    data-widget="row.column" data-container="container" data-spacing="aaaa"
-                                    data-bg-position="left top">
-
-
-                                    <div class="moto-widget moto-widget-row moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-                                        data-grid-type="sm" data-widget="row" data-spacing="laaa"
-                                        data-bg-position="left top">
-
-
-                                        <div class="container-fluid">
-                                            <div class="row" data-container="container">
-
-
-                                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-1 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-                                                    data-widget="row.column" data-container="container"
-                                                    data-spacing="aaaa" data-bg-position="left top">
-
-
-                                                </div>
-                                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-9 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-                                                    data-widget="row.column" data-container="container"
-                                                    data-spacing="aaaa" data-bg-position="left top">
-
-
-                                                    <div class="moto-widget moto-widget-row moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-                                                        data-grid-type="sm" data-widget="row" data-spacing="aaaa"
-                                                        data-bg-position="left top">
-
-
-                                                        <div class="container-fluid">
-                                                            <div class="row" data-container="container">
-
-
-                                                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-6 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto"
-                                                                    data-widget="row.column" data-container="container"
-                                                                    data-spacing="aala" data-bg-position="left top">
-                                                                    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small"
-                                                                        data-widget="text" data-preset="default"
-                                                                        data-spacing="asas" data-animation="">
-                                                                        <div
-                                                                            class="moto-widget-text-content moto-widget-text-editable">
-                                                                            <p class="moto-text_261">ADDRESS:</p>
-                                                                            <p class="moto-text_261">&nbsp;</p>
-                                                                            <p class="moto-text_186">Lorance 542B,
-                                                                                Tailstoi Town 5248 MT, United
-                                                                                States&nbsp;</p>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                    <div data-widget-id="wid_1555319808_ekn2e2zsn"
-                                                                        class="moto-widget moto-widget-divider moto-preset-2 moto-align-left moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-small  "
-                                                                        data-widget="divider_horizontal"
-                                                                        data-preset="2">
-                                                                        <hr class="moto-widget-divider-line"
-                                                                            style="max-width:100%;width:60px;">
-                                                                    </div>
-                                                                    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small"
-                                                                        data-widget="text" data-preset="default"
-                                                                        data-spacing="asas" data-animation=""
-                                                                        data-draggable-disabled="">
-                                                                        <div
-                                                                            class="moto-widget-text-content moto-widget-text-editable">
-                                                                            <p class="moto-text_261">PHONE:</p>
-                                                                            <p class="moto-text_261"><br></p>
-                                                                            <p class="moto-text_186"><a
-                                                                                    href="tel:1234567890"
-                                                                                    data-action="call"
-                                                                                    class="moto-link">+90 (123) 456 78
-                                                                                    99</a><br></p>
-                                                                            <p class="moto-text_186"><a
-                                                                                    href="tel:1234567890"
-                                                                                    data-action="call"
-                                                                                    class="moto-link">+90 (123) 456 78
-                                                                                    03</a></p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div data-widget-id="wid_1555319897_1b1jefzw8"
-                                                                        class="moto-widget moto-widget-divider moto-preset-2 moto-align-left moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-small  "
-                                                                        data-widget="divider_horizontal"
-                                                                        data-preset="2">
-                                                                        <hr class="moto-widget-divider-line"
-                                                                            style="max-width:100%;width:60px;">
-                                                                    </div>
-                                                                    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small"
-                                                                        data-widget="text" data-preset="default"
-                                                                        data-spacing="asas" data-animation="">
-                                                                        <div
-                                                                            class="moto-widget-text-content moto-widget-text-editable">
-                                                                            <p class="moto-text_261">EMAIL:</p>
-                                                                            <p class="moto-text_261">&nbsp;</p>
-                                                                            <p class="moto-text_186"><a
-                                                                                    href="mailto:mail@demolink.com"
-                                                                                    data-action="mail"
-                                                                                    class="moto-link">mail@demolink.com</a>
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div data-widget-id="wid_1555319940_mmlc8vv09"
-                                                                        class="moto-widget moto-widget-divider moto-preset-2 moto-align-left moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-small  "
-                                                                        data-widget="divider_horizontal"
-                                                                        data-preset="2">
-                                                                        <hr class="moto-widget-divider-line"
-                                                                            style="max-width:100%;width:60px;">
-                                                                    </div>
-                                                                    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small"
-                                                                        data-widget="text" data-preset="default"
-                                                                        data-spacing="asas" data-animation="">
-                                                                        <div
-                                                                            class="moto-widget-text-content moto-widget-text-editable">
-                                                                            <p class="moto-text_261">WORKING HOURS:</p>
-                                                                            <p class="moto-text_261">&nbsp;</p>
-                                                                            <p class="moto-text_186">Monday - Friday:
-                                                                                9:00 am - 6:00 pm</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div data-widget-id="wid_1555319979_d1lv6td5t"
-                                                                        class="moto-widget moto-widget-divider moto-preset-2 moto-align-left moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-small  "
-                                                                        data-widget="divider_horizontal"
-                                                                        data-preset="2">
-                                                                        <hr class="moto-widget-divider-line"
-                                                                            style="max-width:100%;width:60px;">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-6 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto"
-                                                                    data-widget="row.column" data-container="container"
-                                                                    data-spacing="aala" data-bg-position="left top">
-
-
-                                                                    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-small"
-                                                                        data-widget="text" data-preset="default"
-                                                                        data-spacing="aass" data-animation="">
-                                                                        <div
-                                                                            class="moto-widget-text-content moto-widget-text-editable">
-                                                                            <h3 class="moto-text_267"><span
-                                                                                    class="moto-color_custom1">Write a
-                                                                                    Massage&nbsp;</span></h3>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div id="wid_1555319995_sgk7l55px"
-                                                                        class="moto-widget moto-widget-contact_form moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small  "
-                                                                        data-preset="default" data-widget="contact_form"
-                                                                        data-spacing="asas">
-                                                                        <div ng-controller="widget.ContactForm.Controller"
-                                                                            ng-init="hash = '2@eyJoIjoiSFljQXNsYlhUS09rM0l2ZzBqb0pKZ1YzR2Q0ZXc1RTNxdXQ5YktjRlExRT0iLCJpIjoiVnhBeDFpOGpTUW85dGlKS0hOVDd1Zz09IiwidiI6IjlEU2lOaUxwVWpGR2M4TzNaMlBHZnNVUEVqbWVuSkxmbEoxWEE0MXhReGVGZW9qNGtiQ0V5amI3RG5COEFLd2VvNjYzdFBIV2k4R1JPZW5iaCs4dTRoMVZEVnlXa1YwMkJxTVB4b2hjSFg4PSJ9';actionAfterSubmission={&quot;action&quot;:&quot;none&quot;,&quot;url&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:&quot;&quot;};resetAfterSubmission=false">
-                                                                            <form id="wid_1555319995_sgk7l55px__form"
-                                                                                class="moto-widget-contact_form-form"
-                                                                                role="form" name="contactForm"
-                                                                                ng-submit="submit()" novalidate>
-                                                                                <div ng-show="sending"
-                                                                                    class="contact-form-loading"></div>
-
-                                                                                <div
-                                                                                    class="moto-widget-contact_form-group">
-                                                                                    <label
-                                                                                        for="field_name_wid_1555319995_sgk7l55px"
-                                                                                        class="moto-widget-contact_form-label">Your
-                                                                                        name</label>
-                                                                                    <input type="text"
-                                                                                        class="moto-widget-contact_form-field moto-widget-contact_form-input"
-                                                                                        placeholder="Your name *"
-                                                                                        ng-blur="validate('name')"
-                                                                                        required
-                                                                                        ng-model-options="{ updateOn: 'blur' }"
-                                                                                        name="name"
-                                                                                        id="field_name_wid_1555319995_sgk7l55px"
-                                                                                        ng-model="message.name" />
-                                                                                    <span
-                                                                                        class="moto-widget-contact_form-field-error ng-cloak"
-                                                                                        ng-cloak
-                                                                                        ng-show="contactForm.name.$invalid && !contactForm.name.$pristine && !contactForm.name.emailInvalid">Field
-                                                                                        is required</span>
-                                                                                </div>
-
-                                                                                <div
-                                                                                    class="moto-widget-contact_form-group">
-                                                                                    <label
-                                                                                        for="field_email_wid_1555319995_sgk7l55px"
-                                                                                        class="moto-widget-contact_form-label">Email</label>
-                                                                                    <input type="text"
-                                                                                        class="moto-widget-contact_form-field moto-widget-contact_form-input"
-                                                                                        placeholder="Email *"
-                                                                                        ng-blur="validate('email')"
-                                                                                        required
-                                                                                        ng-model-options="{ updateOn: 'blur' }"
-                                                                                        name="email"
-                                                                                        id="field_email_wid_1555319995_sgk7l55px"
-                                                                                        ng-model="message.email" />
-                                                                                    <span
-                                                                                        class="moto-widget-contact_form-field-error ng-cloak"
-                                                                                        ng-cloak
-                                                                                        ng-show="contactForm.email.$invalid && !contactForm.email.$pristine && !contactForm.email.emailInvalid">Field
-                                                                                        is required</span>
-                                                                                    <span
-                                                                                        class="moto-widget-contact_form-field-error ng-cloak"
-                                                                                        ng-cloak
-                                                                                        ng-show="contactForm.email.emailInvalid && !contactForm.email.$pristine">Incorrect
-                                                                                        email</span>
-                                                                                </div>
-
-                                                                                <div
-                                                                                    class="moto-widget-contact_form-group">
-                                                                                    <label
-                                                                                        for="field_phone_wid_1555319995_sgk7l55px"
-                                                                                        class="moto-widget-contact_form-label">Phone</label>
-                                                                                    <input type="text"
-                                                                                        class="moto-widget-contact_form-field moto-widget-contact_form-input"
-                                                                                        placeholder="Phone *"
-                                                                                        ng-blur="validate('phone')"
-                                                                                        required
-                                                                                        ng-model-options="{ updateOn: 'blur' }"
-                                                                                        name="phone"
-                                                                                        id="field_phone_wid_1555319995_sgk7l55px"
-                                                                                        ng-model="message.phone" />
-                                                                                    <span
-                                                                                        class="moto-widget-contact_form-field-error ng-cloak"
-                                                                                        ng-cloak
-                                                                                        ng-show="contactForm.phone.$invalid && !contactForm.phone.$pristine && !contactForm.phone.emailInvalid">Field
-                                                                                        is required</span>
-                                                                                </div>
-
-
-
-
-                                                                                <div
-                                                                                    class="moto-widget-contact_form-group">
-                                                                                    <label
-                                                                                        for="field_message_wid_1555319995_sgk7l55px"
-                                                                                        class="moto-widget-contact_form-label">Message</label>
-                                                                                    <textarea
-                                                                                        class="moto-widget-contact_form-field moto-widget-contact_form-textarea"
-                                                                                        rows="3" placeholder="Message *"
-                                                                                        ng-blur="validate('message')"
-                                                                                        required
-                                                                                        ng-model-options="{ updateOn: 'blur' }"
-                                                                                        name="message"
-                                                                                        id="field_message_wid_1555319995_sgk7l55px"
-                                                                                        ng-model="message.message"></textarea>
-                                                                                    <span
-                                                                                        class="moto-widget-contact_form-field-error ng-cloak"
-                                                                                        ng-cloak
-                                                                                        ng-show="contactForm.message.$invalid && !contactForm.message.$pristine">Field
-                                                                                        is required</span>
-                                                                                </div>
-
-
-
-                                                                                <div class="moto-widget-contact_form-success ng-cloak"
-                                                                                    ng-cloak
-                                                                                    ng-show="showSuccessMessage">
-                                                                                    Your message was sent successfully
-                                                                                </div>
-                                                                                <div class="moto-widget-contact_form-danger ng-cloak"
-                                                                                    ng-cloak ng-show="emailError">
-                                                                                    Sorry, your message was not sent
-                                                                                </div>
-                                                                                <div
-                                                                                    class="moto-widget-contact_form-buttons">
-
-                                                                                    <div class="moto-widget moto-widget-button moto-preset-default moto-preset-provider-default moto-align-left"
-                                                                                        data-preset="default"
-                                                                                        data-align="left">
-                                                                                        <button type="submit"
-                                                                                            class="moto-widget-button-link moto-size-medium"
-                                                                                            data-size="medium"><span
-                                                                                                class="fa moto-widget-theme-icon"></span><span
-                                                                                                class="moto-widget-button-label">Join
-                                                                                                Today</span></button>
-                                                                                    </div>
-
-                                                                                </div>
-                                                                            </form>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
-                                                    data-widget="row.column" data-container="container"
-                                                    data-spacing="aaaa" data-bg-position="left top">
-
-
-                                                </div>
-
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
                             </div>
                         </div>
+                        <div class="card bg-white b1-light mb-2">
+                            <div class="card-header bg-none" id="headingOne">
+                                <h2 class="mb-0 raise-a-request-faq">
+                                    <p class="collapsed d-flex mb-0 justify-content-between align-items-center bg-none text-left hand f-16"
+                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        Is BloodConnect a registered blood bank?
+                                        <i class="fa fa-angle-right f-30"></i>
+                                    </p>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse  bg-white b-0" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body color-dark-light bg-white">
+                                    No, BloodConnect is not a blood bank. We do not collect the blood ourselves, or
+                                    store it with us. We
+                                    work with Government approved blood banks and Colleges/Corporates/RWAs to promote
+                                    voluntary blood
+                                    donation, and organize blood donation camps.
+                                    <br> Think of us as an organization creating awareness about the blood donation, and
+                                    connecting new
+                                    and regular donors with blood banks to improve availability of the blood in the
+                                    country.
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-white b1-light mb-2">
+                            <div class="card-header bg-none" id="headingTwo">
+                                <h2 class="mb-0 raise-a-request-faq">
+                                    <p class="collapsed mb-0 d-flex justify-content-between align-items-center bg-none text-left hand f-16"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                                        aria-controls="collapseTwo">
+                                        Can I reach the BloodConnect office and help out?
+                                        <i class="fa fa-angle-right f-30"></i>
+                                    </p>
+                                </h2>
+                            </div>
+
+                            <div id="collapseTwo" class="collapse  bg-white b-0" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body color-dark-light bg-white">
+                                    As we have no full time employees, our team works from their respective homes /
+                                    offices and we conduct
+                                    our meetings/activities in the common areas in an office / college. Our corporate,
+                                    college partners
+                                    help us with these for free and we can do all our team meetings there. Our
+                                    registered office is used
+                                    to store all of our material and documents. You should reach out via this form, we
+                                    can certainly take
+                                    forward then.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-white b1-light mb-2">
+                            <div class="card-header bg-none" id="headingEight">
+                                <h2 class="mb-0 raise-a-request-faq">
+                                    <p class="collapsed d-flex mb-0 justify-content-between align-items-center bg-none text-left hand f-16"
+                                        data-toggle="collapse" data-target="#collapseEight" aria-expanded="true"
+                                        aria-controls="collapseEight">
+                                        How can I help in this noble cause?
+                                        <i class="fa fa-angle-right f-30"></i>
+                                    </p>
+                                </h2>
+                            </div>
+
+                            <div id="collapseEight" class="collapse  bg-white b-0" aria-labelledby="headingEight"
+                                data-parent="#accordionExample">
+                                <div class="card-body color-dark-light bg-white">
+                                    You can help in many ways -
+                                    <br> 1. Help us Organize a Camp in your College/Society/Company
+                                    <br> 2. Sponsor Us that would help us save more lives!
+                                    <br> 3. Register as an emergency donor
+                                    <br> 4. Join Our team
+
+                                    <br><br> You can easily find links to all these options on our website. In case of
+                                    any issues, please
+                                    Contact Us.
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-white b1-light mb-2">
+                            <div class="card-header bg-none" id="headingThree">
+                                <h2 class="mb-0 raise-a-request-faq">
+                                    <p class="collapsed mb-0 d-flex justify-content-between align-items-center bg-none text-left hand f-16"
+                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+                                        aria-controls="collapseThree">
+                                        How many employees does BloodConnect have?
+                                        <i class="fa fa-angle-right f-30"></i>
+                                    </p>
+                                </h2>
+                            </div>
+
+                            <div id="collapseThree" class="collapse  bg-white b-0" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body color-dark-light bg-white">
+                                    Zero. We are completely volunteer driven and have no full time employees
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-white b1-light mb-2">
+                            <div class="card-header bg-none" id="headingFour">
+                                <h2 class="mb-0 raise-a-request-faq">
+                                    <p class="collapsed mb-0 d-flex justify-content-between align-items-center bg-none text-left hand f-16"
+                                        data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
+                                        aria-controls="collapseFour">
+                                        Where can you find FAQs about blood donation?
+                                        <i class="fa fa-angle-right f-30"></i>
+                                    </p>
+                                </h2>
+                            </div>
+
+                            <div id="collapseFour" class="collapse  bg-white b-0" aria-labelledby="headingFour"
+                                data-parent="#accordionExample">
+                                <div class="card-body color-dark-light bg-white">
+                                    You will certainly find some of the FAQs on the page: Join Us→ Register As a Donor.
+                                    We have tried to
+                                    cover the concerns there. For more, please do check the Resources tab
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-white b1-light mb-2">
+                            <div class="card-header bg-none" id="headingFive">
+                                <h2 class="mb-0 raise-a-request-faq">
+                                    <p class="collapsed mb-0 d-flex justify-content-between align-items-center bg-none text-left hand f-16"
+                                        data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
+                                        aria-controls="collapseFive">
+                                        Does BloodConnect work on anything else outside blood donation?
+                                        <i class="fa fa-angle-right f-30"></i>
+                                    </p>
+                                </h2>
+                            </div>
+
+                            <div id="collapseFive" class="collapse  bg-white b-0" aria-labelledby="headingFive"
+                                data-parent="#accordionExample">
+                                <div class="card-body color-dark-light bg-white">
+                                    Yes, we do work on additional fields related to blood donation: Thalassemia, plasma
+                                    requirements, etc.
+                                    Our core focus remains blood donation though. We believe that is a big problem to
+                                    solve
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 col-md-12 px-0">
+                    <div class="container bg-white  pt-4 pb-4 shadow z-2 rounded pl-5 pr-5 px-3-sm ">
+                        <h4 class="ft-24 text-center color-dark mb-0 uppercase">Drop us a message</h4>
+                        <p class="color-grey mb-3 text-center f-14">Fill this and we will be in touch with you soon.
+                            <br> If you
+                            need blood, please register at <a class="color-main f-14" href="/findDonor">FIND
+                                A DONOR</a>
+                            only
+                        </p>
+                        <form class="contact-form " action="" onsubmit="createRequest(event)">
+                            <div class="form-group mb-4">
+                                <label class="m-0  color-dark" for="name">Your Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label class="m-0  color-dark" for="email">Email Address</label>
+                                <input type="email" class="form-control" placeholder="Email Address" id="email"
+                                    required>
+
+                            </div>
+                            <div class="form-group mb-4">
+                                <label class="m-0  color-dark" for="message">Message</label>
+                                <textarea name="message" id="message" cols="20" rows="3"
+                                    placeholder="Enter Your Message Here" required></textarea>
+                            </div>
+                            <button type="submit" id="submit-request-button"
+                                class="pl-4 pr-4 fw-6  mb-4 mx-auto btn-main bg-main" value="Submit">
+                                <p class="color-white m-0 fw-4">Submit</p>
+                                <!-- Animation -->
+                                <svg style="width: 50px;" version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                                    enable-background="new 0 0 0 0" xml:space="preserve">
+                                    <path fill="#fff"
+                                        d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+                                        <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+                                            dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite" />
+                                    </path>
+                                </svg>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-</div>
-{{>homeFooter}}
+
+    <!-- Success modal -->
+    <div class="success-modal py-5 shadow bg-white hide" id="success-modal">
+        <img width="100" src="./img/popup/mail-sent.jpg" alt="">
+        <p class="color-dark fw-6 mt-3">Your messsage is recieved</p>
+        <p class="color-grey">You would be redirected in <span id="seconds">3s</span></p>
+    </div>
+
+    {{>homeFooter}}

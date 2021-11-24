@@ -1,0 +1,407 @@
+{{>homeNavbar}}
+
+
+<div class="container-fluid h-90-min  pl-0 pr-0 content relative pt-60-sm d-flex flex-row align-items-center">
+    <div class="d-flex flex-column container h-80-min justify-content-center z-5 px-0-sm">
+        <h1 class="display-4 color-white  text-center-sm px-2 mb-0">Organize a </h1>
+        <h1 class="display-4 color-white px-2 text-center-sm">Blood Donation Camp</h1>
+        <p class="color-white w-50-lg px-2 text-center-sm">
+            You are one step closer to being a superhero. Organize a blood donation camp in your college, office,
+            society
+            and get that superman cape. We would take care of the process end-to-end
+        </p>
+        <div class="d-flex mt-2 px-2">
+            <button class="shadow btn-main bg-main  mx-auto-sm mb-4" onclick="showCampForm()">Request
+                callback</button>
+        </div>
+    </div>
+    <div class="main-slider" id="homepageSlider" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+
+        <!-- Gradinet here -->
+
+
+
+        <div class="homepage-slider camp-slider"
+            style="background: url('./img/organize-a-camp/banner1.jpg');background-size: cover;">
+
+        </div>
+        <div class="homepage-slider camp-slider"
+            style="background: url('./img/organize-a-camp/banner2.jpg');background-size: cover;">
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="container mt-5 pt-5 mt-5-sm">
+    <div class="row mb-5 pt-5-sm">
+        <div class="col-lg-5 col-sm-10 mx-auto">
+            <img class="wd-inherit color-hover" src="./img/organize-a-camp/OrgACamp-2.JPG" alt="">
+        </div>
+        <div class="col-lg-6 col-sm-10 mx-auto mb-3 d-flex flex-column justify-content-center">
+            <h4 class="f-30  color-dark mb-3">What are Blood Donation Camps</h4>
+            <p class="color--dark-light">Rather than going to the hospital to donate blood, we bring the hospital to
+                you. We
+                partner with government recognized blood banks who bring their expert doctors and staff to conduct a
+                clean
+                blood donation camp without any hassles. The camp can be organized in a common area or in a blood
+                donation bus
+                which we can bring. We make all the other arrangements, you just have to provide a ventilated clean
+                area.Now
+                saving lives does not need any travel even, just 20minutes at the camp! </p>
+
+        </div>
+    </div>
+    <div class="row mb-5">
+
+        <div class="col-lg-6 col-sm-10 mx-auto mb-3 d-flex justify-content-center flex-column">
+            <h4 class="f-30 mb-3  color-dark">How we can make them different:</h4>
+            <p class="color-dark-light">We do not just help you organize a camp, but we also try to ensure each
+                donor feels
+                special. A blood donation camp can be fun with music, it can have a theme, it can motivate people
+                for greater
+                things. We help you do that, right from motivating people before the camp to ensuring each donor
+                feels a sense
+                of pride and happiness post donation.</p>
+        </div>
+        <div class="col-lg-5 col-sm-10 mx-auto mb-3 ">
+            <img class="wd-inherit color-hover" src="./img/organize-a-camp/OrgACamp-1.jpeg" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- Collaborators -->
+<div class="container-fluid bg-main-light py-5">
+    <div class="container mt-5 pt-5 px-0-sm">
+        <h4 class="f-30  color-dark text-center mb-5">Some of Our Past Collaborators</h4>
+        <div class="row pb-5 mb-5 camp no-gutters justify-content-center ">
+            <div class="col-lg-2 col-sm-6 col-6 d-flex align-items-center justify-content-end partner flex-column mb-2">
+                <img class="partners-logo" src="/img/raise-a-request/logo.jpg" alt="">
+                <p class="color-white f-12 fw-6 text-center">GGITS Jabalpur </p>
+                <div class="bg-main-dark filter"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="success-modal py-5 shadow bg-white hide" id="success-modal">
+    <img width="100" src="./img/popup/mail-sent.jpg" alt="">
+    <p class="color-dark fw-6 mt-3">Request raised successfully</p>
+    <p class="color-grey">You would be redirected in <span id="seconds">3s</span></p>
+</div>
+
+<!-- Form -->
+<div class="container-fluid bg-main-dark mb-5" id="campForm">
+    <div class="container pt-5 pb-5">
+
+        <div class="row  ">
+            <div class="col-lg-6 d-flex justify-content-center mb-4">
+
+                <div id="fade-slide" class="wd-inherit" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+
+                    <div>
+                        <img class="wd-inherit" style="height: 600px;" src="./img/organize-a-camp/slide/1.jpg" alt="">
+                    </div>
+
+                    <div>
+                        <img class="wd-inherit" style="height: 600px;" src="./img/organize-a-camp/slide/2.jpg" alt="">
+                    </div>
+
+                    <div>
+                        <img class="wd-inherit" style="height: 600px;" src="./img/organize-a-camp/slide/3.jpg" alt="">
+                    </div>
+
+                    <div>
+                        <img class="wd-inherit" style="height: 600px;" src="./img/organize-a-camp/slide/4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 bg-white px-5 px-3-sm pt-4 pb-3 rounded" style="height: 600px;">
+
+                <!-- Personal details div -->
+                <h4 class="color-dark ">Organize A Camp</h4>
+                <p class="color-grey ">Fill this form and a volunteer would be in touch with you soon</p>
+                <form action="" class="request-form" onsubmit="submitRequest(event)">
+
+                    <div id="personalDetails">
+                        <div class="form-group mb-4">
+                            <label class="m-0   color-dark" for="your_name">Your Name</label>
+                            <input type="text" class="form-control" id="your_name" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label class="m-0   color-dark" for="email">Email Address</label>
+                            <input type="email" class="form-control" placeholder="example@domain.com" id="email"
+                                required>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label class="m-0   color-dark" for="phone_number">Phone Number</label>
+                            <input type="text" pattern="\d*" class="form-control" placeholder="9999xxxxxx"
+                                id="phone_number" maxlength="10" required>
+
+                        </div>
+                        <div class="form-group mb-4" id="cityRegion">
+                            <label class="m-0   color-dark" for="city_region">City Region</label>
+                            <select name="city_region" id="city_region" onchange="selectingCity(event)" required>
+                                <option disabled selected value> -- select an city -- </option>
+                                <option value="Agra">Agra</option>
+                                <option value="Delhi NCR">Delhi NCR</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Ranchi">Ranchi</option>
+                                <option value="Kanpur">Kanpur</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Lucknow">Lucknow</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Varanasi">Varanasi</option>
+                                <option value="Bhubaneswar">Bhubaneswar</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-4 hide" id="otherCity">
+                            <label class="m-0 not-required  color-dark" for="other_city">City Name</label>
+                            <input type="text" class="form-control" id="other_city" placeholder="City Name">
+                        </div>
+
+
+                        <div class="form-group mb-4">
+                            <label class="m-0 not-required color-dark" for="organization_name">Organization
+                                Name</label>
+                            <input type="text" class="form-control" id="organization_name" placeholder="Organization">
+                        </div>
+
+                        <div class="navigation-buttons inline text-center-sm">
+                            <!-- <button type="submit" class="pl-5 pr-5 right-lg mb-4 mx-auto btn-main bg-main">Submit</button> -->
+                            <button type="submit" id="submit-request-button"
+                                class="pl-5 pr-5 right-lg mb-4 mx-auto btn-main bg-main" value="Submit">
+                                <p class="color-white m-0 fw-4">Submit</p>
+                                <!-- Animation -->
+                                <svg style="width: 50px;" version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                                    enable-background="new 0 0 0 0" xml:space="preserve">
+                                    <path fill="#fff"
+                                        d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+                                        <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+                                            dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite" />
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<div class="container-fluid pt-5">
+    <div class="container d-flex flex-column">
+        <hr class="color-dark w-100" />
+        <div class="d-flex justify-content-between align-items-center flex-column-sm">
+            <a href="/">
+                <img src="/img/logo.png" alt="" />
+            </a>
+            <ul class="footer-list mb-0 d-flex justify-content-start align-items-center pr-4 col-lg-4 col-sm-12">
+                <li class="footer-item bg-white">
+                    <a href="https://facebook.com/" target="_blank" class="footer-link color-main"><i
+                            class="fa fa-facebook-f"></i></a>
+                </li>
+                <li class="footer-item bg-white">
+                    <a href="https://instagram.com/" target="_blank" class="footer-link color-main"><i
+                            class="fa fa-instagram"></i></a>
+                </li>
+                <li class="footer-item bg-white">
+                    <a href="https://twitter.com/" target="_blank" class="footer-link color-main"><i
+                            class="fa fa-twitter"></i></a>
+                </li>
+                <li class="footer-item bg-white">
+                    <a href="https://www.youtube.com/channel/" target="_blank" class="footer-link color-main"><i
+                            class="fa fa-youtube"></i></a>
+                </li>
+                <li class="footer-item bg-white">
+                    <a href="https://www.linkedin.com/company/" target="_blank" class="footer-link color-main"><i
+                            class="fa fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </div>
+        <hr class="color-dark w-100" />
+        <div class="row">
+            <div class="col-lg-4 col-sm-12">
+                <p class="color-dark bold mb-2">NAVIGATION</p>
+                <ul class="footer-list pl-0">
+                    <li class="mr-4 compact">
+                        <a class="color-dark f-14" href="/">Home</a>
+                    </li>
+                    <li class="mr-4 compact">
+                        <a class="color-dark f-14" href="/about">About us</a>
+                    </li>
+                    <li class="mr-4 compact">
+                        <a class="color-dark f-14" href="/joinUs">Join us</a>
+                    </li>
+                    <li class="mr-4 compact">
+                        <a class="color-dark f-14" href="/contact">Contact us</a>
+                    </li>
+                    <li class="mr-4 compact">
+                        <a class="color-dark f-14" href="/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <p class="color-dark bold mb-2">FIND A DONOR</p>
+                <ul class="footer-list pl-0">
+                    <li class=" mr-4 compact"><a class="color-dark f-14" href="/" onclick="goToForm('jabalpur')">Find A
+                            Donor
+                            in jabalpur</a></li>
+                    <li class=" mr-4 compact"><a class="color-dark f-14" href="/" onclick="goToForm('jabalpur')">Find A
+                            Donor
+                            in jabalpur</a></li>
+                    <li class=" mr-4 compact"><a class="color-dark f-14" href="/" onclick="goToForm('jabalpur')">Find A
+                            Donor
+                            in jabalpur</a></li>
+                    <li class=" mr-4 compact"><a class="color-dark f-14" href="/" onclick="goToForm('jabalpur')">Find A
+                            Donor
+                            in jabalpur</a></li>
+                    <li class=" mr-4 compact"><a class="color-dark f-14" href="/" onclick="goToForm('jabalpur')">Find A
+                            Donor
+                            in jabalpur</a></li>
+
+                </ul>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <p class="color-dark bold mb-2">ORGANIZE A CAMP</p>
+                <ul class="footer-list pl-0">
+                    <li class="mr-4 compact">
+                        <a class="color-dark f-14" href="/">Organize a camp
+                            in jabalpur</a>
+                    </li>
+                    <li class="mr-4 compact">
+                        <a class="color-dark f-14" href="/">Organize a camp
+                            in jabalpur</a>
+                    </li>
+                    <li class="mr-4 compact">
+                        <a class="color-dark f-14" href="/">Organize a camp
+                            in jabalpur</a>
+                    </li>
+                    <li class="mr-4 compact">
+                        <a class="color-dark f-14" href="/">Organize a camp
+                            in jabalpur</a>
+                    </li>
+                    <li class="mr-4 compact">
+                        <a class="color-dark f-14" href="/">Organize a camp
+                            in jabalpur</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-3">
+            <p class="color-dark f-14">
+                Copyright &copy; Blood Bucket 2021 All Rights Reserved.
+            </p>
+
+            <ul class="footer-list">
+                <li class="left mx-3">
+                    <a class="color-dark f-12" href="#">Privacy</a>
+                </li>
+                <li class="left ml-3">
+                    <a class="color-dark f-12" href="#">Terms and Condition</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/main_v1.js"></script>
+<script src="./js/campRequest1.js?v=2"></script>
+
+<script>
+
+
+    $(".main-slider").slick({
+
+        // normal options...
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        loop: true,
+        dots: true
+
+    });
+
+    showCampForm = () => {
+        document.getElementById("city_region").focus()
+    }
+
+    organizeCamp = (city) => {
+        $("#city_region").val(city)
+        showCampForm()
+    }
+
+
+    // Camp request workflow
+    showPersonaldetailsInput = () => {
+        $("#personalDetails").show()
+        $("#page1").addClass('active')
+        $("#page2").removeClass('active')
+        $("#campDetails").hide()
+    }
+    showCampDetailsInput = () => {
+        $("#personalDetails").hide()
+        $("#page2").addClass('active')
+        $("#page1").removeClass('active')
+        $("#campDetails").show()
+    }
+    selectingCity = (e) => {
+        if (e.target.value == "Other") {
+            $("#otherCity").removeClass('hide')
+            $("#cityRegion").addClass('hide')
+        }
+        else
+            $("#otherCity").addClass('hide')
+    }
+    showPersonaldetailsInput()
+    var hashParams = window.location.hash.substr(1).split('&');
+    for (var i = 0; i < hashParams.length; i++) {
+        var p = hashParams[i].split('=');
+        if (document.getElementById(p[0].toLowerCase()))
+            showCampForm()
+    }
+    $('body').keydown(function (e) {
+        if (e.keyCode == 27) {
+            // put your code here if any (that will run after Esc pressed).
+            hideCampSlide()
+        }
+    });
+    $('#fade-slide').slick({
+        dots: false,
+        autoplay: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        arrows: false,
+        pauseOnHover: false,
+        pauseOnFocus: false
+    });
+
+</script>
+</body>
+
+</html>

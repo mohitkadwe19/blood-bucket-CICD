@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getHospitalDashboard, getHospitalLogin, getDonorList, getReceiverList, getAppoint, getChangeDetails } = require('../controllers/hospitalController');
+const { getHospitalDashboard, getHospitalLogin, getHospitalDonorList, getHospitalReceiverList, getAppoint, getChangeDetails } = require('../controllers/hospitalController');
 
 
 // get hospital dashboard get controller
@@ -10,10 +10,10 @@ router.get('/getHospitalDashboard', getHospitalDashboard);
 router.get('/getHospitalLogin', getHospitalLogin);
 
 // get donor list get controller
-router.get('/getDonorList', getDonorList);
+router.get('/getHospitalDonorList', getHospitalDonorList);
 
 // get receiver list get controller
-router.get('/getReceiverList', getReceiverList);
+router.get('/getHospitalReceiverList', getHospitalReceiverList);
 
 //get appoint get controller
 router.get('/getAppoint', getAppoint);

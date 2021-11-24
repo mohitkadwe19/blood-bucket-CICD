@@ -1,0 +1,165 @@
+{{>homeNavbar}}
+<div class="container-fluid h-50 bg-main-dark  pl-0 pr-0 content  relative d-flex flex-row align-items-center">
+    <div class="d-flex flex-column container py-3 justify-content-center z-5 px-0-sm">
+        <h1 class="display-4 color-white  text-center px-2 mb-1 ">We Are Here To Help</h1>
+        <p class="color-white pt-4 mb-1 text-center px-3">
+            BloodConnect Foundation has partnered with other NGOs to help you reach out to more and more potential
+            donors.
+            Fill this short form to reach out to our partner organisations.
+        </p>
+    </div>
+    <div class="main-slider h-60" id="homepageSlider" style="background-color: #980000;">
+
+    </div>
+
+</div>
+
+
+<div class="container-fluid bg-main-light  content pt-5-sm pb-5">
+    <div class="row flex-column-reverse-sm m-0 pt-5 ">
+        <div class="col-lg-5 d-flex flex-column justify-content-start ">
+            <h1 class="display-5 color-black text-center p-1 mb-1 ">Our Collaborators</h1>
+            <!--row1-->
+
+            <div class="row py-3 md-3 align-items-center">
+                <div class="col d-flex justify-content-center">
+                    <img src="img/raise-a-request/logo.jpg" alt="Ggits  LOGO" width=170px>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center d-flex justify-content-center ">
+                    <h6>Ggits Jabalpur</h6>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Form -->
+        <div class="col-lg-7  rounded bg-white shadow">
+
+            <!-- Personal details div -->
+            <div class="personal-details pl-5 pr-5 pt-3 pb-3 px-3-sm" id="personal-details">
+
+                <form action="" class="request-form" id="request-form" onsubmit="submitRequest(event)">
+
+                    <div class="form-group mb-4 mt-5">
+                        <label class="m-0   color-dark" for="patientName">Patient Name</label>
+                        <input type="text" class="form-control" id="patient_name" placeholder="Patient Name" required>
+                    </div>
+                    <div class="form-group mb-4 mt-2">
+                        <label class="m-0   color-dark" for="your_name">Your Name</label>
+                        <input type="text" class="form-control" id="your_name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group mb-4 mt-2">
+                        <label class="m-0   color-dark" for="email">Email address</label>
+                        <input type="email" class="form-control" placeholder="example@domain.com" id="email" required>
+                    </div>
+                    <div class="form-group mb-4 mt-2">
+                        <label class="m-0   color-dark" for="phone_number">Phone Number</label>
+                        <input type="text" pattern="\d*" class="form-control" placeholder="9999xxxxxx" maxlength="10"
+                            id="phone_number" required>
+                    </div>
+
+                    <div class="d-flex justify-content-between flex-column-sm">
+                        <div class="form-group mb-4 mt-2">
+                            <label class="m-0  color-dark" for="units">Units Required</label>
+                            <input type="number" class="form-control" id="units" placeholder="Units Required"
+                                value="1" />
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="m-0  color-dark" for="bg">Blood Group Required</label>
+                            <select class="form-control" name="bg" id="bg">
+                                <option value="A+">A+</option>
+                                <option value="B+">B+</option>
+                                <option value="AB+">AB+</option>
+                                <option value="O+">O+</option>
+                                <option value="A-">A-</option>
+                                <option value="B-">B-</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O-">O-</option>
+                                <option value="Any">Any</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label class="m-0  color-dark" for="requirement">Requirement</label>
+                            <select class="form-control" name="requirement" id="requirement">
+                                <option value="Blood">Blood</option>
+                                <option value="Platelets">Platelets</option>
+                                <!--option value="Plasma (COVID Recovered)">Plasma (COVID Recovered)</option-->
+                                <option value="Plasma">Plasma</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mb-4">
+                        <label class="m-0   color-dark" for="city_region">City Region</label>
+                        <select name="city_region" id="city_region" onchange="selectingCity(event)" required>
+                            <option disabled selected value> -- Select an city -- </option>
+                            <option value="Agra">Agra</option>
+                            <option value="Jabalpur">Jabalpur</option>
+                            <option value="Delhi NCR">Delhi NCR
+                            </option>
+                            <option value="Jaipur">Jaipur</option>
+                            <option value="Ranchi">Ranchi</option>
+                            <option value="Kanpur">Kanpur</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Lucknow">Lucknow</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Varanasi">Varanasi</option>
+                            <option value="Bhubaneswar">Bhubaneswar</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <!-- <small class="form-text text-muted">We are currently handling requests for these cities only</small>  -->
+                    </div>
+
+                    <!-- <div class="form-group mb-4 hide" id="otherCity">
+              <label class="m-0 not-required  color-dark" for="other_city">City Name</label>
+              <input type="text" class="form-control" id="other_city" placeholder="City Name">
+            </div> -->
+                    <div class="form-group mb-4 hide" id="otherCity">
+                        <label class="m-0 not-required  color-dark" for="other_city">City Name</label>
+                        <input type="text" class="form-control" id="other_city" placeholder="City Name">
+                    </div>
+                    <div class="navigation-buttons inline text-center-sm">
+                        <button type="submit" id="submit-request-button"
+                            class="pl-4 pr-4 fw-6 right-lg mb-4 mx-auto btn-main bg-main" value="Submit">
+                            <p class="color-white m-0 fw-4">Create Request</p>
+                            <!-- Animation -->
+                            <svg style="width: 50px;" version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                                enable-background="new 0 0 0 0" xml:space="preserve">
+                                <path fill="#fff"
+                                    d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+                                    <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+                                        dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite" />
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Success popup-->
+<div class="success-modal py-5 shadow bg-white hide" id="success-modal">
+    <img width="100" src="/img/popup/mail-sent.jpg" alt="">
+    <p class="color-dark fw-6 mt-3">Request raised successfully</p>
+    <p class="color-grey">You would be redirected in <span id="seconds">3s</span></p>
+</div>
+
+
+<div class="container-fluid bg-main-dark p-5 text-center">
+    <h4 class="f-40 text-center color-white">Join our team to help save lives</h4>
+    <button class="btn-main color-white bg-main fw-6"><a class="color-white fw-6" href="/joinUs">Join Now <i
+                class="fa fa-heart"></i> </a></button>
+</div>
+
+{{>homeFooter}}

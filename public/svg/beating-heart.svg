@@ -1,0 +1,6 @@
+<svg width="150" height="150" viewBox="0 0 200 200">
+  <g transform="translate(100 100)">
+    <path fill="tomato" d="M42.71-42.73c-9.71-9.69-25.46-9.69-35.18 0L0-35.21l-7.54-7.52c-9.71-9.69-25.46-9.69-35.17 0s-9.71 25.41 0 35.1L0 35 42.71-7.63c9.72-9.69 9.72-25.41 0-35.1z"/>
+    <animateTransform attributeName="transform" type="scale" values="1; 1.5; 1.25; 1.5; 1.5; 1;" dur="1s" repeatCount="indefinite" additive="sum"/>
+  </g>
+</svg>

@@ -4,47 +4,36 @@ const Schema = mongoose.Schema
 const userSchema = new Schema({
     name: {
         type: String,
-
+        required: true
     },
     email: {
         type: String,
-
-    },
-    password: {
-        type: String,
-
+        required: true
     },
     bloodGroup: {
         type: String,
-
-    },
-    phone: {
-        type: String,
-
+        required: true
     },
     address: {
         type: String,
-
+        required: true
     },
-    city: {
+    aadharNumber:
+    {
+        type: Number,
+        required: true
+    },
+    phone: {
+        type: Number,
+        required: true
+    },
+    password: {
         type: String,
-
+        required: true
     },
-    state: {
+    role: {
         type: String,
-
-    },
-    pinCode: {
-        type: String,
-
-    },
-    country: {
-        type: String,
-
-    },
-    isAdmin: {
-        type: Boolean,
-        default: false
+        default: "user"
     }
 })
 
