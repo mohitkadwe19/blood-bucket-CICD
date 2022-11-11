@@ -1,50 +1,22 @@
-name: CICD for Youtube
+name: Nodejs CICD
 
 on:
-  push:
-    branches:
-        - master
+  push: 
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    
     strategy:
       matrix:
         node-version: [16.x]
-
+  
     steps:
-      - uses: actions/checkout@v2
-      - name: Use node js
-        uses: actions/setup-node@v1
-        with:
-         node-version: ${{ matrix.node-version }}
-      - name: npm install and build
-        run: |
-          npm install
-          npm run start
-        env: 
-          CI: true   
-
-
-  depoly:
-    needs: [build]
-    runs-on: ubuntu-latest
-
-    steps:
-     - name: SSH deploy
-       uses: appleboy/ssh-action@master
-       with:
-          host: ${{ secrets.HOST }}
-          username:  ${{ secrets.USER }}
-          key:  ${{ secrets.KEY }}
-          port:  ${{ secrets.PORT }}
-          script: |
-              curl -o-   https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh    | bash
-              . ~/.nvm/nvm.sh
-               nvm instal 16
-               npm install -g pm2
-               cd ~/cd blood-bucket-CICD
-               git pull origin main
-               npm install
-               npm run start
-               pm2 restart api
+      - uses: actions/checkout@v1
+      - run: npm install
+      - run: pm2 stop all
+      - run: pm2 start start
+      - run: sudo service apache2 restart
