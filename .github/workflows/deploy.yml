@@ -15,8 +15,4 @@ jobs:
         node-version: [16.x]
   
     steps:
-      - uses: actions/checkout@v1
-      - run: npm install
-      - run: pm2 stop all
-      - run: pm2 start start
-      - run: sudo service apache2 restart
+      - run: echo "done"
