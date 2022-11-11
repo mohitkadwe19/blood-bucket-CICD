@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon src/app.js -e js,hbs"
+    "start": "node src/app.js -e js,hbs"
   },
   "dependencies": {
     "connect-mongo": "^4.6.0",
