@@ -10,9 +10,5 @@ jobs:
   build:
     runs-on: self-hosted
     
-    strategy:
-      matrix:
-        node-version: [16.x]
-  
     steps:
       - run: echo "done"
