@@ -3,7 +3,7 @@ name: CICD for Youtube
 on:
   push:
     branches:
-        - main
+        - master
 
 jobs:
   build:
